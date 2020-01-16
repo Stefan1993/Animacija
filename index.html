@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body
+        {
+            margin-left: 33%;
+            margin-right: 33%;
+            margin-top: 10%;
+            background-color: #050210;
+        }
+        #box1
+         {
+            position: absolute;
+            height: 500px;
+            width: 500px;
+            border-radius: 50%;
+            background: linear-gradient( #fb5dad, #55fb9f, #b97aff);
+            filter: blur(38px);
+            
+
+
+        }
+        #box2 
+        {
+            margin-top: 20px;
+            margin-left: 20px;
+            position: absolute;
+            height: 460px;
+            width: 460px;
+            border-radius: 50%;
+            background: linear-gradient( #fb5dad, #55fb9f, #b97aff);
+        }
+        #box3 
+        {
+            height: 400px;
+            width: 400px;
+            position: absolute;
+            border-radius: 50%;
+            background:#050210;
+            margin-top: 50px;
+            margin-left: 50px;
+        }
+        #box4 
+        {
+            height: 380px;
+            width: 380px;
+            position: absolute;
+            border-radius: 50%;
+            background:#0a0422;
+            margin-top: 60px;
+            margin-left: 60px;
+
+        }
+         #box2 {
+             animation-name: wheel;
+             animation-duration:1s;
+             animation-iteration-count: infinite;
+             animation-timing-function: linear;
+
+         }
+         #box1 {
+            animation-name: wheel;
+             animation-duration:1s;
+             animation-iteration-count: infinite;
+             animation-timing-function: linear;
+         }
+         #box4 
+         {
+             animation-name: pulse;
+             animation-duration: 1.3s;
+             animation-iteration-count: infinite;
+             animation-timing-function: linear;
+             animation-play-state: running;
+             
+         }
+         
+         
+
+        @keyframes wheel {
+            from {
+                transform: rotateZ(0deg);
+            }
+            to 
+            {
+                transform: rotateZ(360deg);
+            }
+
+        }
+        @keyframes pulse {
+           0% 
+           {
+               transform: scale(10%);
+           }
+           20% {
+               transform: scale(40%);
+           }
+           33%
+           {
+               transform: scale(60%);
+
+           }
+           60%
+           {
+               transform: scale(80%);
+           }
+           90%
+           {
+               transform: scale(90%);
+           }
+           100% {
+               transform: scale(100%);
+           }
+        }
+    </style>
+</head>
+<body>
+     
+    <div id="box1"></div>
+    <div id="box2"></div>
+
+    <div id="box3"></div>
+    <div id="box4"></div>
+
+
+</body>
+</html>
