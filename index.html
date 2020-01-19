@@ -20,7 +20,7 @@
             width: 500px;
             border-radius: 50%;
             background: linear-gradient( #fb5dad, #55fb9f, #b97aff);
-            filter: blur(38px);
+            filter: blur(74px);
             
 
 
@@ -45,15 +45,18 @@
             margin-top: 50px;
             margin-left: 50px;
         }
-        #box4 
+        #box3::after 
         {
+            content: "";
             height: 380px;
             width: 380px;
-            position: absolute;
+            position:absolute;
             border-radius: 50%;
             background:#0a0422;
-            margin-top: 60px;
-            margin-left: 60px;
+            margin-top: 10px;
+            margin-left: 10px;
+            
+            
 
         }
          #box2 {
@@ -69,15 +72,17 @@
              animation-iteration-count: infinite;
              animation-timing-function: linear;
          }
-         #box4 
-         {
-             animation-name: pulse;
-             animation-duration: 1.3s;
-             animation-iteration-count: infinite;
-             animation-timing-function: linear;
+         
+            
+          #box3::after {
+            animation-name: pulse;
+            animation-duration: 1s;
+            animation-iteration-count: infinite;
+            animation-timing-function: ease;
+              
+          }   
              
-             
-         }
+         
          
          
 
@@ -92,30 +97,17 @@
 
         }
         @keyframes pulse {
-           0% 
+           from 
            {
                transform: scale(10%);
            }
-           20% {
-               transform: scale(40%);
-           }
-           33%
-           {
-               transform: scale(60%);
-
-           }
-           60%
-           {
-               transform: scale(80%);
-           }
-           90%
-           {
+           to {
                transform: scale(90%);
            }
-           100% {
-               transform: scale(100%);
-           }
         }
+        
+
+       
     </style>
 </head>
 <body>
@@ -124,7 +116,7 @@
     <div id="box2"></div>
 
     <div id="box3"></div>
-    <div id="box4"></div>
+    
 
 
 </body>
